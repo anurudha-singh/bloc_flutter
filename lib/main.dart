@@ -12,7 +12,7 @@ void main() {
     RepositoryProvider(
       create: (context) =>
           ProductRepo(), // Calling repo from here help us to maintain the syncing of the data
-      child: MyApp(),
+      child: const MyApp(),
     ),
     // )
   );
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
-          home: HomeScreen()),
+          home: const HomeScreen()),
     );
   }
 }
