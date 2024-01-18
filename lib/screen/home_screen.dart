@@ -11,7 +11,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.blue,
-          title: Text('Bloc'),
+          title: Text('Home Screen'),
         ),
         body: Center(
           child: TextButton(

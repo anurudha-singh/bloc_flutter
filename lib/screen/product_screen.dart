@@ -26,12 +26,10 @@ class _ProductScreenState extends State<ProductScreen> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.blue,
-          title: Text('Product Screen'),
+          title: const Text('Product Screen'),
         ),
         body: BlocBuilder<ProductBloc, ProductState>(
           builder: (context, state) {
-            print(
-                'current state is ${state}'); //current state is ProductblocInitial()
             if (state is ProductLoadingState) {
               return const Center(
                 child: CircularProgressIndicator.adaptive(),
