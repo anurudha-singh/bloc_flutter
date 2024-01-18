@@ -2,8 +2,21 @@ import 'package:bloc_flutter/bloc/product_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class ProductScreen extends StatelessWidget {
+class ProductScreen extends StatefulWidget {
   const ProductScreen({super.key});
+
+  @override
+  State<ProductScreen> createState() => _ProductScreenState();
+}
+
+class _ProductScreenState extends State<ProductScreen> {
+  @override
+  void initState() {
+    context
+        .read<ProductBloc>()
+        .add(ProductLoadedEvent()); // we have added a Loaded event  the bloc
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
